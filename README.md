@@ -1,4 +1,10 @@
 # Fetchetera
+[![NPM](https://nodei.co/npm/fetchetera.png)](https://npmjs.org/package/fetchetera)
+
+[![Build Status](https://travis-ci.org/emanuelelongo/fetchetera.svg?branch=master)](https://travis-ci.org/emanuelelongo/fetchetera)
+[![Maintainability](https://api.codeclimate.com/v1/badges/c255d3146d23946d3655/maintainability)](https://codeclimate.com/github/emanuelelongo/fetchetera/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/c255d3146d23946d3655/test_coverage)](https://codeclimate.com/github/emanuelelongo/fetchetera/test_coverage)
+
 Warp [node-fetch](https://www.npmjs.com/package/node-fetch) adding cache
 support.
 

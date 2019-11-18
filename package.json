@@ -4,6 +4,7 @@
   "description": "node-fetch wrapper with cache",
   "scripts": {
     "test": "jest",
+    "test:coverage": "jest --coverage",
     "build": "tsc",
     "prepare": "tsc"
   },
