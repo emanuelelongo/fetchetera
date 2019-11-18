@@ -1,0 +1,27 @@
+{
+  "name": "examples",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "server": "ts-node src/server.ts",
+    "client": "ts-node src/client.ts",
+    "client-redis": "ts-node src/clientWithRedis.ts"
+  },
+  "keywords": [],
+  "author": "Emanuele Longo",
+  "license": "ISC",
+  "dependencies": {
+    "fetchetera": "file:..",
+    "lru-cache": "^5.1.1",
+    "keyv": "^3.1.0",
+    "@keyv/redis": "^2.0.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.2",
+    "@types/keyv": "^3.1.0",
+    "@types/lru-cache": "^5.1.0",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.4"
+  }
+}
