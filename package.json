@@ -1,6 +1,6 @@
 {
   "name": "fetchetera",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "node-fetch wrapper with cache",
   "scripts": {
     "test": "jest",
@@ -21,9 +21,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "devDependencies": {
-    "@types/http-cache-semantics": "^4.0.0",
     "@types/jest": "^24.0.22",
-    "@types/node-fetch": "^2.5.3",
     "jest": "^24.9.0",
     "nock": "^11.7.0",
     "ts-jest": "^24.1.0",
@@ -31,6 +29,8 @@
   },
   "dependencies": {
     "http-cache-semantics": "^4.0.3",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.0",
+    "@types/http-cache-semantics": "^4.0.0",
+    "@types/node-fetch": "^2.5.3"
   }
 }

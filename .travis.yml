@@ -11,3 +11,9 @@ before_script:
 after_success:
     - npm run test:coverage
     - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+deploy:
+    provider: npm
+    email: $NPM_EMAIL
+    api_key: $NPM_API_KEY
+    on:
+        branch: master
