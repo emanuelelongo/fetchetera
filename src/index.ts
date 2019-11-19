@@ -1,2 +1,2 @@
 export { default } from './fetchetera';
-export { CacheEntry } from './types';
+export { CacheEntry, Cache, AwaitableCache, PlainHeaders, RequestOptions } from './types';
