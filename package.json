@@ -1,6 +1,6 @@
 {
   "name": "fetchetera",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "node-fetch wrapper with cache",
   "scripts": {
     "test": "jest",
