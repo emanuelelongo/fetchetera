@@ -1,6 +1,6 @@
 {
   "name": "fetchetera",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "node-fetch wrapper with cache",
   "scripts": {
     "test": "jest",
@@ -12,7 +12,13 @@
     "type": "git",
     "url": "https://github.com/emanuelelongo/fetchetera.git"
   },
-  "keywords": ["fetch", "cache", "isomorphic", "universal", "http"],
+  "keywords": [
+    "fetch",
+    "cache",
+    "isomorphic",
+    "universal",
+    "http"
+  ],
   "author": "Emanuele Longo",
   "license": "ISC",
   "files": [

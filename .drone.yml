@@ -1,0 +1,34 @@
+---
+kind: pipeline
+type: docker
+name: default
+
+steps:
+- name: build
+  image: node:latest
+  commands:
+  - npm install
+
+- name: test
+  image: node:latest
+  environment:
+    CC_TEST_REPORTER_ID:
+      from_secret: cc_test_reporter_id
+  commands:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+  - npm run test:coverage
+  - ./cc-test-reporter after-build --exit-code $?
+
+- name: publish to NPM
+  when:
+    branch:
+    - master
+  image: node:latest
+  environment:
+    NPM_TOKEN:
+      from_secret: npm_token
+  commands:
+  - npm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN
+  - npm publish
