@@ -11,6 +11,9 @@ steps:
   - npm run build
 
 - name: test
+  when:
+    event:
+    - push
   image: node:latest
   environment:
     CC_TEST_REPORTER_ID:
@@ -21,6 +24,14 @@ steps:
   - ./cc-test-reporter before-build
   - npm run test:coverage
   - ./cc-test-reporter after-build --exit-code $?
+
+- name: test PR
+  when:
+    event:
+    - pull_request
+  image: node:latest
+  commands:
+  - npm run test:coverage
 
 - name: publish to NPM
   when:
