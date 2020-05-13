@@ -11,6 +11,17 @@ steps:
   - npm run build
 
 - name: test
+  when:
+    event:
+    - pull_request
+  image: node:latest
+  commands:
+  - npm run test
+
+- name: test coverage
+  when:
+    event:
+    - push
   image: node:latest
   environment:
     CC_TEST_REPORTER_ID:
